@@ -57,6 +57,10 @@ public class Main {
     public static void printVector(Float [] x){
         String s = "";
         for (int i = 0; i < x.length; i++){
+            if(x[i].isNaN() || x[i].isInfinite()){
+                System.out.printf("x%d = Infinite number of solutions; ", i);
+                continue;
+            }
             s += String.format("x%d = %f; ", i, x[i]);
         }System.out.println(s);
     }

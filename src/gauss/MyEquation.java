@@ -18,6 +18,11 @@ public class MyEquation implements Gauss<Float, MyEquation> {
         }
         this.equation.clear();
         for (int i = 0; i < size; i++) {
+            if(i == 0){
+                equation.add((float) 0);
+                continue;
+            }
+   //         equation.add((float) 1);
             Random random = new Random();
             this.equation.add((float) (random.nextInt() % 10) + 1);
         }
